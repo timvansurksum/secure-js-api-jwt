@@ -13,7 +13,7 @@ import { useHistory } from "react-router-dom";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 
 export const AppHeader = ({ tabValue }) => {
-  const tabs = ["/books", "/favorite", "/book", "/users"];
+  const tabs = ["/scientists", "/favorite", "/book", "/users"];
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
 

@@ -3,28 +3,28 @@ import { Button, Grid, Paper, Typography } from "@material-ui/core";
 import "../styles.css";
 import { AppHeader } from "./AppHeader";
 
-export const Books = () => {
+export const Scientists = () => {
   return (
     <div className="Content">
       <AppHeader tabValue={0} />
       <Grid container justify="center" alignItems="center" direction="column">
         <Grid item style={{ marginBottom: "5vh" }}>
           <Typography variant="h3" gutterBottom>
-            Curated Books!
-            <span role="img" aria-label="books">
+            Curated scientists!
+            <span role="img" aria-label="scientists">
               📚
             </span>
           </Typography>
         </Grid>
         <Grid item container justify="center">
-          {books.map((book, key) => {
+          {scientists.map((scientist, key) => {
             return (
-              <Book
+              <Scientist
                 key={key}
-                name={book.name}
-                id={book.id}
-                author={book.author}
-                color={book.color}
+                name={scientist.name}
+                id={scientist.id}
+                author={scientist.author}
+                color={scientist.color}
                 onClick={() => console.log("My Favorite")}
               />
             );
@@ -35,9 +35,9 @@ export const Books = () => {
   );
 };
 
-const Book = ({ name, id, author, onClick }) => {
+const Scientist = ({ name, id, author, onClick }) => {
   return (
-    <Paper elevation={2} className="Book">
+    <Paper elevation={2} className="scientist">
       <Grid container direction="column">
         <Grid item xs={12}>
           <Typography variant="h6">{name}</Typography>
@@ -58,7 +58,7 @@ const Book = ({ name, id, author, onClick }) => {
   );
 };
 
-const books = [
+const scientists = [
   {
     name: "Surrounded by idiots",
     author: "Thomas Erikson",
